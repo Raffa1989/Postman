@@ -94,10 +94,7 @@ pm.test("Future_salary", function () {
     pm.expect(salary_5_years).to.eql(req_salary*4.2);
 });
 
-// ***Написать цикл который выведет в консоль по порядку элементы списка из параметра person
-// for (let i in jsonData.person )  
-// console.log(jsonData.person[i])
-
+// Написать цикл который выведет в консоль по порядку элементы списка из параметра person
 for (let key in resp_person){
     console.log(key + ':' + resp_person[key])
 }
