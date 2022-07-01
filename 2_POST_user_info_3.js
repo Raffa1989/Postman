@@ -44,7 +44,7 @@ pm.test("Correct name_req", function () {
 
 // Проверить, что age в ответе равно age s request (age забрать из request)
 pm.test("Correct age_req", function () {
-    pm.expect(req_age).to.eql("33");
+    pm.expect(cor_age).to.eql(req_age);
 });
 
 // Проверить, что salary в ответе равно salary s request (salary забрать из request)
@@ -59,3 +59,4 @@ console.log("response_family - ", family)
 pm.test("Salary_1_5", function () {
     pm.expect(req_salary_1_5).to.eql(salary_4);
 });
+
