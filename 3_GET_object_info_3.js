@@ -43,12 +43,12 @@ console.log("response_family - ", resp_family)
 
 // Проверить, что у параметра dog есть параметры name
 pm.test("Dog_name", function () {
-    pm.expect(JSON.stringify(resp_dog)).to.include("name");
+    pm.expect(resp_dog).to.have.property("name");
 });
 
 // Проверить, что у параметра dog есть параметры age
 pm.test("Dog_age", function () {
-    pm.expect(JSON.stringify(resp_dog)).to.include("age");
+    pm.expect(resp_dog).to.have.property("age");
 });
 
 // Проверить, что параметр name имеет значение Luky
