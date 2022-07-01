@@ -11,6 +11,7 @@ let month_42_salary = jsonData["qa_salary_after_3.5_years"];
 let person_u_name = jsonData.person.u_name;
 let person_u_age = jsonData.person.u_age;
 let salary_5_years = jsonData.person.u_salary_5_years;
+let resp_person = jsonData.person;
 
 // Спарсить request
 let req = request.data;
@@ -94,5 +95,9 @@ pm.test("Future_salary", function () {
 });
 
 // ***Написать цикл который выведет в консоль по порядку элементы списка из параметра person
-for (let i in jsonData.person)  
-console.log(jsonData.person[i])
+// for (let i in jsonData.person )  
+// console.log(jsonData.person[i])
+
+for (let key in resp_person){
+    console.log(key + ':' + resp_person[key])
+}
