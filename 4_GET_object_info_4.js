@@ -61,4 +61,3 @@ pm.environment.set("age", req.age);
 pm.environment.set("salary", req.salary);
 
 resp_salary.forEach((item) => {console.log(item)});
-
