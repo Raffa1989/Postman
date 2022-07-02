@@ -26,32 +26,32 @@ pm.test("Status code is 200", function () {
 
 // Проверить, что json response имеет параметр start_qa_salary
 pm.test("Check_1", function(){
-    pm.expect(JSON.stringify(jsonData)).to.include("start_qa_salary");
+    pm.expect(jsonData).to.have.property("start_qa_salary");
 });
 
 // Проверить, что json response имеет параметр qa_salary_after_6_months
 pm.test("Check_2", function(){
-    pm.expect(JSON.stringify(jsonData)).to.include("qa_salary_after_6_months");
+    pm.expect(jsonData).to.have.property("qa_salary_after_6_months");
 });
 
 // Проверить, что json response имеет параметр qa_salary_after_12_months
 pm.test("Check_3", function(){
-    pm.expect(JSON.stringify(jsonData)).to.include("qa_salary_after_12_months");
+    pm.expect(jsonData).to.have.property("qa_salary_after_12_months");
 });
 
 // Проверить, что json response имеет параметр qa_salary_after_1.5_year
 pm.test("Check_4", function(){
-    pm.expect(JSON.stringify(jsonData)).to.include("qa_salary_after_1.5_year");
+    pm.expect(jsonData).to.have.property("qa_salary_after_1.5_year");
 });
 
 // Проверить, что json response имеет параметр qa_salary_after_3.5_years
 pm.test("Check_5", function(){
-    pm.expect(JSON.stringify(jsonData)).to.include("qa_salary_after_3.5_year");
+    pm.expect(jsonData).to.have.property("qa_salary_after_3.5_years");
 });
 
 // Проверить, что json response имеет параметр person
 pm.test("Check_6", function(){
-    pm.expect(JSON.stringify(jsonData)).to.include("person");
+    pm.expect(jsonData).to.have.property("person");
 });
 
 // Проверить, что параметр start_qa_salary равен salary из request (salary забрать из request.)
